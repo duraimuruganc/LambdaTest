@@ -1,0 +1,43 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="LambdaTestParallelSuite" parallel="tests">
+   <!-- Test for Chrome on Windows 10 -->
+   <test thread-count="5" name="Chrome - Windows 10">
+       <parameter name="browser" value="chrome" />
+       <parameter name="browserVersion" value="88.0" />
+       <parameter name="os" value="Windows 10" />
+       <classes>
+           <class name="SeleniumPackage.SimpleFormTest" />
+       </classes>
+   </test>
+
+   <!-- Test for Microsoft Edge on macOS Sierra -->
+   <test thread-count="5" name="Microsoft Edge - macOS Sierra">
+       <parameter name="browser" value="msedge" />
+       <parameter name="browserVersion" value="87.0" />
+       <parameter name="os" value="macOS Sierra" />
+       <classes>
+           <class name="SeleniumPackage.SimpleFormTest" />
+       </classes>
+   </test>
+
+  <!--   Test for Firefox on Windows 7 -->
+
+   <test thread-count="5" name="Firefox - Windows 7">
+       <parameter name="browser" value="firefox" />
+       <parameter name="browserVersion" value="82.0" />
+       <parameter name="os" value="Windows 7" />
+       <classes>
+           <class name="SeleniumPackage.SimpleFormTest" />
+       </classes>
+   </test>
+
+<!--    Test for Internet Explorer on Windows 10 -->
+   <test thread-count="5" name="Internet Explorer - Windows 10">
+       <parameter name="browser" value="internet explorer" />
+       <parameter name="browserVersion" value="11.0" />
+       <parameter name="os" value="Windows 10" />
+       <classes>
+           <class name="SeleniumPackage.SimpleFormTest" />
+       </classes>
+   </test> 
+</suite>
